@@ -1,0 +1,50 @@
+2025-01-18 00:23:49,426 - INFO - Iniciando monitoramento do sistema...
+2025-01-18 00:24:00,956 - WARNING - Anomalia #1 - Frontend: Processo não encontrado
+2025-01-18 00:24:00,957 - WARNING - Detalhes: {}
+2025-01-18 00:24:00,957 - WARNING - Anomalia #2 - Backend: Endpoint não responde
+2025-01-18 00:24:00,957 - WARNING - Detalhes: {}
+2025-01-18 00:24:00,957 - WARNING - Anomalia #3 - Frontend: Endpoint não responde
+2025-01-18 00:24:00,957 - WARNING - Detalhes: {}
+2025-01-18 00:24:41,268 - WARNING - Anomalia #4 - Frontend: Processo não encontrado
+2025-01-18 00:24:41,268 - WARNING - Detalhes: {}
+2025-01-18 00:24:41,268 - WARNING - Anomalia #5 - Backend: Endpoint não responde
+2025-01-18 00:24:41,268 - WARNING - Detalhes: {}
+2025-01-18 00:24:41,271 - WARNING - Anomalia #6 - Frontend: Endpoint não responde
+2025-01-18 00:24:41,271 - WARNING - Detalhes: {}
+2025-01-18 00:24:41,271 - INFO - Intervalo de checagem aumentado para 45.0s
+2025-01-18 00:25:36,690 - WARNING - Anomalia #7 - Frontend: Processo não encontrado
+2025-01-18 00:25:36,691 - WARNING - Detalhes: {}
+2025-01-18 00:25:36,691 - INFO - Intervalo de checagem aumentado para 67.5s
+2025-01-18 00:25:36,691 - WARNING - Anomalia #8 - Backend: Endpoint não responde
+2025-01-18 00:25:36,691 - WARNING - Detalhes: {}
+2025-01-18 00:25:36,692 - INFO - Intervalo de checagem aumentado para 101.25s
+2025-01-18 00:25:36,692 - WARNING - Anomalia #9 - Frontend: Endpoint não responde
+2025-01-18 00:25:36,692 - WARNING - Detalhes: {}
+2025-01-18 00:25:36,692 - INFO - Intervalo de checagem aumentado para 151.875s
+2025-01-18 00:28:18,943 - WARNING - Anomalia #10 - Frontend: Processo não encontrado
+2025-01-18 00:28:18,944 - WARNING - Detalhes: {}
+2025-01-18 00:28:18,944 - INFO - Intervalo de checagem aumentado para 227.8125s
+2025-01-18 00:28:18,944 - WARNING - Anomalia #11 - Backend: Endpoint não responde
+2025-01-18 00:28:18,944 - WARNING - Detalhes: {}
+2025-01-18 00:28:18,944 - INFO - Intervalo de checagem aumentado para 300s
+2025-01-18 00:28:18,944 - WARNING - Anomalia #12 - Frontend: Endpoint não responde
+2025-01-18 00:28:18,944 - WARNING - Detalhes: {}
+2025-01-18 00:28:18,944 - INFO - Intervalo de checagem aumentado para 300s
+2025-01-18 00:33:27,645 - WARNING - Anomalia #13 - Backend: Tempo de resposta alto
+2025-01-18 00:33:27,645 - WARNING - Detalhes: {
+  "status_code": 200,
+  "response_time": 2.0498154163360596
+}
+2025-01-18 00:33:27,645 - INFO - Intervalo de checagem aumentado para 300s
+2025-01-18 00:33:27,645 - WARNING - Anomalia #14 - Frontend: Endpoint não responde
+2025-01-18 00:33:27,645 - WARNING - Detalhes: {}
+2025-01-18 00:33:27,645 - INFO - Intervalo de checagem aumentado para 300s
+2025-01-18 00:43:18,511 - INFO - Iniciando monitoramento do sistema...
+2025-01-18 00:43:30,023 - WARNING - Anomalia #1 - Backend: Endpoint não responde
+2025-01-18 00:43:30,023 - WARNING - Detalhes: {}
+2025-01-18 00:43:30,024 - WARNING - Anomalia #2 - Frontend: Endpoint não responde
+2025-01-18 00:43:30,024 - WARNING - Detalhes: {}
+2025-01-18 00:44:10,601 - WARNING - Anomalia #3 - Backend: Endpoint não responde
+2025-01-18 00:44:10,601 - WARNING - Detalhes: {}
+2025-01-18 00:44:10,602 - WARNING - Anomalia #4 - Frontend: Endpoint não responde
+2025-01-18 00:44:10,602 - WARNING - Detalhes: {}

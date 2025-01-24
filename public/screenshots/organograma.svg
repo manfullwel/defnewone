@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <!-- Estilo -->
+  <style>
+    .box { fill: #ffffff; stroke: #1e40af; stroke-width: 2; }
+    .title { fill: #1e40af; font-family: Arial; font-size: 14px; font-weight: bold; }
+    .subtitle { fill: #6b7280; font-family: Arial; font-size: 12px; }
+    .arrow { stroke: #1e40af; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+    .future { stroke-dasharray: 5,5; }
+    .module { fill: #dbeafe; }
+    .component { fill: #f0f9ff; }
+    .page { fill: #eff6ff; }
+  </style>
+
+  <!-- Definições de Marcadores -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#1e40af"/>
+    </marker>
+  </defs>
+
+  <!-- Título do Projeto -->
+  <rect x="500" y="20" width="200" height="60" rx="5" class="box module"/>
+  <text x="600" y="45" text-anchor="middle" class="title">Demand Report</text>
+  <text x="600" y="65" text-anchor="middle" class="subtitle">Sistema de Gestão de Demandas</text>
+
+  <!-- Módulos Principais -->
+  <!-- Frontend -->
+  <rect x="100" y="150" width="180" height="60" rx="5" class="box module"/>
+  <text x="190" y="175" text-anchor="middle" class="title">Frontend</text>
+  <text x="190" y="195" text-anchor="middle" class="subtitle">React + TypeScript</text>
+
+  <!-- Backend (Futuro) -->
+  <rect x="520" y="150" width="180" height="60" rx="5" class="box module future"/>
+  <text x="610" y="175" text-anchor="middle" class="title">Backend</text>
+  <text x="610" y="195" text-anchor="middle" class="subtitle">Node.js + Express (Futuro)</text>
+
+  <!-- Database (Futuro) -->
+  <rect x="920" y="150" width="180" height="60" rx="5" class="box module future"/>
+  <text x="1010" y="175" text-anchor="middle" class="title">Database</text>
+  <text x="1010" y="195" text-anchor="middle" class="subtitle">PostgreSQL (Futuro)</text>
+
+  <!-- Componentes Frontend -->
+  <!-- Páginas -->
+  <rect x="50" y="280" width="150" height="200" rx="5" class="box page"/>
+  <text x="125" y="300" text-anchor="middle" class="title">Páginas</text>
+  <text x="125" y="325" text-anchor="middle" class="subtitle">Demo</text>
+  <text x="125" y="345" text-anchor="middle" class="subtitle">RelatorioDiario</text>
+  <text x="125" y="365" text-anchor="middle" class="subtitle">RelatorioGeral</text>
+  <text x="125" y="385" text-anchor="middle" class="subtitle">MobileDemo</text>
+  <text x="125" y="405" text-anchor="middle" class="subtitle">AnalisadorArquivos</text>
+  <text x="125" y="425" text-anchor="middle" class="subtitle">Dashboard</text>
+  <text x="125" y="445" text-anchor="middle" class="subtitle">(+ Futuras Páginas)</text>
+
+  <!-- Componentes -->
+  <rect x="220" y="280" width="150" height="200" rx="5" class="box component"/>
+  <text x="295" y="300" text-anchor="middle" class="title">Componentes</text>
+  <text x="295" y="325" text-anchor="middle" class="subtitle">FileUploadAnalyzer</text>
+  <text x="295" y="345" text-anchor="middle" class="subtitle">ErrorBoundary</text>
+  <text x="295" y="365" text-anchor="middle" class="subtitle">Dashboard</text>
+  <text x="295" y="385" text-anchor="middle" class="subtitle">UI Components</text>
+  <text x="295" y="405" text-anchor="middle" class="subtitle">(+ Novos Componentes)</text>
+
+  <!-- Recursos Futuros -->
+  <rect x="520" y="280" width="180" height="200" rx="5" class="box future"/>
+  <text x="610" y="300" text-anchor="middle" class="title">Recursos Futuros</text>
+  <text x="610" y="325" text-anchor="middle" class="subtitle">Análise Preditiva</text>
+  <text x="610" y="345" text-anchor="middle" class="subtitle">Chatbot Suporte</text>
+  <text x="610" y="365" text-anchor="middle" class="subtitle">Dashboards Personalizáveis</text>
+  <text x="610" y="385" text-anchor="middle" class="subtitle">Integração Externa</text>
+  <text x="610" y="405" text-anchor="middle" class="subtitle">Relatórios Avançados</text>
+  <text x="610" y="425" text-anchor="middle" class="subtitle">Machine Learning</text>
+
+  <!-- Mobile Features -->
+  <rect x="720" y="280" width="180" height="200" rx="5" class="box"/>
+  <text x="810" y="300" text-anchor="middle" class="title">Mobile Features</text>
+  <text x="810" y="325" text-anchor="middle" class="subtitle">Push Notifications</text>
+  <text x="810" y="345" text-anchor="middle" class="subtitle">Offline Mode</text>
+  <text x="810" y="365" text-anchor="middle" class="subtitle">Touch Gestures</text>
+  <text x="810" y="385" text-anchor="middle" class="subtitle">Real-time Updates</text>
+  <text x="810" y="405" text-anchor="middle" class="subtitle">Responsive Design</text>
+
+  <!-- Setas de Conexão -->
+  <path d="M600 80 L600 150" class="arrow"/>
+  <path d="M600 80 L190 150" class="arrow"/>
+  <path d="M600 80 L1010 150" class="arrow"/>
+  
+  <path d="M190 210 L125 280" class="arrow"/>
+  <path d="M190 210 L295 280" class="arrow"/>
+  
+  <path d="M610 210 L610 280" class="arrow future"/>
+  <path d="M610 210 L810 280" class="arrow"/>
+  
+  <!-- Legenda -->
+  <rect x="50" y="520" width="200" height="120" rx="5" class="box"/>
+  <text x="150" y="540" text-anchor="middle" class="title">Legenda</text>
+  
+  <rect x="70" y="555" width="20" height="20" class="box module"/>
+  <text x="100" y="570" class="subtitle">Módulo Principal</text>
+  
+  <rect x="70" y="580" width="20" height="20" class="box component"/>
+  <text x="100" y="595" class="subtitle">Componente</text>
+  
+  <rect x="70" y="605" width="20" height="20" class="box future"/>
+  <text x="100" y="620" class="subtitle">Recurso Futuro</text>
+</svg>

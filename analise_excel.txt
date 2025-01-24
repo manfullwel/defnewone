@@ -1,0 +1,237 @@
+Analisando arquivo: F:/demandstest/docs/_DEMANDAS DE JANEIRO_2025.xlsx
+
+=== INFORMAÇÕES BÁSICAS ===
+Total de linhas: 3441
+Total de colunas: 20
+
+=== CONTEÚDO DAS PRIMEIRAS 10 LINHAS ===
+
+Linha 0:
+Coluna 0: 2024-12-16 00:00:00
+Coluna 1: 2025-01-02 00:00:00
+Coluna 2: 217578.0
+Coluna 3: 2.0
+Coluna 4: 6000
+Coluna 5: TICKET
+Coluna 6: RECEPTIVO
+Coluna 7: JULIO
+Coluna 8: OMNI
+Coluna 9: 19.97.40.8-78.26
+Coluna 10: POLIANA
+Coluna 11: RESOLVIDO
+Coluna 12: AGUARDANDO BOLETO
+Coluna 13: BOLETO 5K
+Coluna 14: nan
+Coluna 15: REGIÃO JULIO
+Coluna 16: nan
+Coluna 17: 2025-01-17 00:00:00
+Coluna 18: RELATÓRIO GERAL
+Coluna 19: nan
+--------------------------------------------------
+
+Linha 1:
+Coluna 0: 2024-12-20 00:00:00
+Coluna 1: 2025-01-02 00:00:00
+Coluna 2: 176597.0
+Coluna 3: 1.0
+Coluna 4: 10000
+Coluna 5: MICHELE UBERLANDIA
+Coluna 6: RECEPTIVO
+Coluna 7: JULIO
+Coluna 8: PANAMERICANO
+Coluna 9: 519
+Coluna 10: THALISSON
+Coluna 11: RESOLVIDO
+Coluna 12: APROVADO
+Coluna 13: nan
+Coluna 14: nan
+Coluna 15: RESOLVIDOS
+Coluna 16: 109.0
+Coluna 17: NaT
+Coluna 18: QUITADO
+Coluna 19: 108.0
+--------------------------------------------------
+
+Linha 2:
+Coluna 0: 2024-12-30 00:00:00
+Coluna 1: 2025-01-02 00:00:00
+Coluna 2: 224396.0
+Coluna 3: 1.0
+Coluna 4: 10962.5
+Coluna 5: TICKET
+Coluna 6: RECEPTIVO
+Coluna 7: JULIO
+Coluna 8: ITAÚ
+Coluna 9: 401
+Coluna 10: THALISSON
+Coluna 11: RESOLVIDO
+Coluna 12: SEM DESCONTO
+Coluna 13: nan
+Coluna 14: nan
+Coluna 15: PENDENTE ATIVO
+Coluna 16: 528.0
+Coluna 17: NaT
+Coluna 18: APROVADO
+Coluna 19: 384.0
+--------------------------------------------------
+
+Linha 3:
+Coluna 0: 2024-11-26 00:00:00
+Coluna 1: 2025-01-02 00:00:00
+Coluna 2: 181787.0
+Coluna 3: 1.0
+Coluna 4: VALORES
+Coluna 5: TICKET
+Coluna 6: RECEPTIVO
+Coluna 7: JULIO
+Coluna 8: BRADESCO
+Coluna 9: TRANSFERENCIA
+Coluna 10: BRUNO MARIANO
+Coluna 11: RESOLVIDO
+Coluna 12: SEM DESCONTO
+Coluna 13: nan
+Coluna 14: nan
+Coluna 15: PENDENTE RECEPTIVO
+Coluna 16: 86.0
+Coluna 17: NaT
+Coluna 18: QUITADO CLIENTE
+Coluna 19: 20.0
+--------------------------------------------------
+
+Linha 4:
+Coluna 0: 2024-11-22 00:00:00
+Coluna 1: 2025-01-02 00:00:00
+Coluna 2: 216061.0
+Coluna 3: 2.0
+Coluna 4: 2800
+Coluna 5: OUVIDORIA
+Coluna 6: RECEPTIVO
+Coluna 7: JULIO
+Coluna 8: RENNER
+Coluna 9: 4005
+Coluna 10: ALANA
+Coluna 11: RESOLVIDO
+Coluna 12: SEM DESCONTO
+Coluna 13: nan
+Coluna 14: nan
+Coluna 15: PRIORIDADE
+Coluna 16: 2.0
+Coluna 17: NaT
+Coluna 18: QUITADO APROVADO
+Coluna 19: 6.0
+--------------------------------------------------
+
+Linha 5:
+Coluna 0: 2024-11-22 00:00:00
+Coluna 1: 2025-01-02 00:00:00
+Coluna 2: 4785.0
+Coluna 3: 1.0
+Coluna 4: VERIFICAR SE QUITOU
+Coluna 5: MONITORAMENTO
+Coluna 6: RECEPTIVO
+Coluna 7: JULIO
+Coluna 8: PANAMERICANO
+Coluna 9: BANCO
+Coluna 10: ISABELLA
+Coluna 11: RESOLVIDO
+Coluna 12: QUITADO CLIENTE
+Coluna 13: nan
+Coluna 14: nan
+Coluna 15: PRIORIDADE TOTAL
+Coluna 16: 5.0
+Coluna 17: NaT
+Coluna 18: QUITADO CANCELADO
+Coluna 19: 5.0
+--------------------------------------------------
+
+Linha 6:
+Coluna 0: 2024-12-04 00:00:00
+Coluna 1: 2025-01-02 00:00:00
+Coluna 2: 221699.0
+Coluna 3: 2.0
+Coluna 4: 6200
+Coluna 5: GABRIELA MIRASSOL
+Coluna 6: RECEPTIVO
+Coluna 7: JULIO
+Coluna 8: BRADESCO
+Coluna 9: 208
+Coluna 10: BRUNO MARIANO
+Coluna 11: RESOLVIDO
+Coluna 12: SEM DESCONTO
+Coluna 13: nan
+Coluna 14: nan
+Coluna 15: SOMA DAS PRIORIDADES
+Coluna 16: 7.0
+Coluna 17: NaT
+Coluna 18: FINALIZADOS EMPRESA
+Coluna 19: nan
+--------------------------------------------------
+
+Linha 7:
+Coluna 0: 2024-12-17 00:00:00
+Coluna 1: 2025-01-02 00:00:00
+Coluna 2: 188800.0
+Coluna 3: 1.0
+Coluna 4: 10000
+Coluna 5: SANDRA PIRACICABA
+Coluna 6: RECEPTIVO
+Coluna 7: JULIO
+Coluna 8: BRADESCO
+Coluna 9: 326.1
+Coluna 10: BRUNA RAQUEL
+Coluna 11: RESOLVIDO
+Coluna 12: SEM DESCONTO
+Coluna 13: nan
+Coluna 14: nan
+Coluna 15: ANÁLISE
+Coluna 16: 46.0
+Coluna 17: NaT
+Coluna 18: FINALIZADOS CLIENTE
+Coluna 19: nan
+--------------------------------------------------
+
+Linha 8:
+Coluna 0: 2024-12-17 00:00:00
+Coluna 1: 2025-01-02 00:00:00
+Coluna 2: 226215.0
+Coluna 3: 2.0
+Coluna 4: valores
+Coluna 5: TICKET
+Coluna 6: RECEPTIVO
+Coluna 7: JULIO
+Coluna 8: ITAÚ
+Coluna 9: 406
+Coluna 10: FABIANA
+Coluna 11: RESOLVIDO
+Coluna 12: SEM DESCONTO
+Coluna 13: nan
+Coluna 14: nan
+Coluna 15: ANÁLISE DO DIA
+Coluna 16: 17.0
+Coluna 17: NaT
+Coluna 18: nan
+Coluna 19: nan
+--------------------------------------------------
+
+Linha 9:
+Coluna 0: 2024-12-18 00:00:00
+Coluna 1: 2025-01-02 00:00:00
+Coluna 2: 228252.0
+Coluna 3: 1.0
+Coluna 4: 10000
+Coluna 5: CESAR CARUARU E RECIFE
+Coluna 6: RECEPTIVO
+Coluna 7: JULIO
+Coluna 8: BRADESCO
+Coluna 9: 213.2
+Coluna 10: BRUNO MARIANO
+Coluna 11: RESOLVIDO
+Coluna 12: SEM DESCONTO
+Coluna 13: nan
+Coluna 14: nan
+Coluna 15: RECEPTIVO
+Coluna 16: 0.0
+Coluna 17: NaT
+Coluna 18: nan
+Coluna 19: nan
+--------------------------------------------------

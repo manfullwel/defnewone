@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manual de Instalação - Dashboard de Demandas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --success-color: #2ecc71;
+            --warning-color: #f1c40f;
+            --text-color: #2c3e50;
+            --bg-color: #ecf0f1;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+        
+        .step-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .warning-box {
+            background: #fff3cd;
+            border-left: 5px solid var(--warning-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        
+        .success-box {
+            background: #d4edda;
+            border-left: 5px solid var(--success-color);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+        }
+        
+        .image-guide {
+            max-width: 100%;
+            border-radius: 5px;
+            margin: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .checklist-item {
+            display: flex;
+            align-items: center;
+            margin: 0.5rem 0;
+        }
+        
+        .checklist-item input[type="checkbox"] {
+            margin-right: 1rem;
+        }
+        
+        .step-content {
+            display: none;
+        }
+        
+        .step-content.active {
+            display: block;
+        }
+        
+        .nav-button {
+            margin: 1rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background: var(--primary-color);
+            color: white;
+            cursor: pointer;
+        }
+        
+        .nav-button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+        
+        .progress-bar {
+            height: 10px;
+            background: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-5">Manual de Instalação - Dashboard de Demandas</h1>
+        
+        <div class="progress mb-4" style="height: 10px;">
+            <div class="progress-bar" role="progressbar" style="width: 0%"></div>
+        </div>
+        
+        <!-- Passo 1: Requisitos -->
+        <div class="step-card" id="step1">
+            <div class="step-number">1</div>
+            <h2>Requisitos Iniciais</h2>
+            <div class="checklist">
+                <div class="checklist-item">
+                    <input type="checkbox" id="python-check">
+                    <label for="python-check">Python 3.8 ou superior instalado</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="git-check">
+                    <label for="git-check">Git instalado</label>
+                </div>
+                <div class="checklist-item">
+                    <input type="checkbox" id="editor-check">
+                    <label for="editor-check">Editor de código (VS Code recomendado)</label>
+                </div>
+            </div>
+            
+            <div class="warning-box mt-4">
+                <h4><i class="fas fa-exclamation-triangle"></i> Importante!</h4>
+                <p>Se você não tem o Python instalado, baixe a versão mais recente em: 
+                   <a href="https://www.python.org/downloads/" target="_blank">python.org</a></p>
+                <p>Durante a instalação do Python, certifique-se de marcar a opção "Add Python to PATH"!</p>
+            </div>
+        </div>
+        
+        <!-- Passo 2: Clonando o Repositório -->
+        <div class="step-card" id="step2">
+            <div class="step-number">2</div>
+            <h2>Clonando o Repositório</h2>
+            <ol>
+                <li>Abra o terminal (CMD ou PowerShell no Windows)</li>
+                <li>Navegue até a pasta onde deseja instalar o projeto</li>
+                <li>Execute o comando:</li>
+            </ol>
+            <div class="bg-dark text-light p-3 rounded">
+                <code>git clone https://github.com/manfullwel/ddemandreport.git</code>
+            </div>
+            <div class="success-box mt-3">
+                <p>Após clonar, você terá uma nova pasta chamada "ddemandreport"</p>
+            </div>
+        </div>
+        
+        <!-- Passo 3: Configurando o Ambiente Virtual -->
+        <div class="step-card" id="step3">
+            <div class="step-number">3</div>
+            <h2>Configurando o Ambiente Virtual</h2>
+            <ol>
+                <li>Abra o terminal na pasta do projeto</li>
+                <li>Crie um ambiente virtual:</li>
+            </ol>
+            <div class="bg-dark text-light p-3 rounded mb-3">
+                <code>python -m venv venv</code>
+            </div>
+            <p>Ative o ambiente virtual:</p>
+            <div class="bg-dark text-light p-3 rounded">
+                <p>No Windows (PowerShell):</p>
+                <code>.\venv\Scripts\Activate.ps1</code>
+                <p class="mt-2">No Windows (CMD):</p>
+                <code>venv\Scripts\activate.bat</code>
+            </div>
+            <div class="warning-box mt-3">
+                <p>Se você receber um erro de permissão no PowerShell, execute:</p>
+                <code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</code>
+            </div>
+        </div>
+        
+        <!-- Passo 4: Instalando Dependências -->
+        <div class="step-card" id="step4">
+            <div class="step-number">4</div>
+            <h2>Instalando Dependências</h2>
+            <p>Com o ambiente virtual ativado, execute:</p>
+            <div class="bg-dark text-light p-3 rounded">
+                <code>pip install -r requirements.txt</code>
+            </div>
+            <div class="warning-box mt-3">
+                <h4><i class="fas fa-exclamation-triangle"></i> Atenção!</h4>
+                <p>Este processo pode demorar alguns minutos. Não feche o terminal durante a instalação.</p>
+            </div>
+        </div>
+        
+        <!-- Passo 5: Configurando Google Cloud -->
+        <div class="step-card" id="step5">
+            <div class="step-number">5</div>
+            <h2>Configurando Google Cloud</h2>
+            <div class="warning-box mb-4">
+                <h4><i class="fas fa-exclamation-triangle"></i> MUITO IMPORTANTE!</h4>
+                <p>Esta é a parte mais crítica da instalação. Siga cada passo com muita atenção!</p>
+            </div>
+            
+            <h4>5.1. Criar Projeto no Google Cloud</h4>
+            <ol>
+                <li>Acesse o <a href="https://console.cloud.google.com" target="_blank">Google Cloud Console</a></li>
+                <li>Clique em "Selecionar Projeto" no topo da página</li>
+                <li>Clique em "Novo Projeto"</li>
+                <li>Nome sugerido: "dashboard-demandas"</li>
+                <li>Clique em "Criar"</li>
+            </ol>
+            
+            <h4 class="mt-4">5.2. Ativar APIs Necessárias</h4>
+            <ol>
+                <li>No menu lateral, vá em "APIs e Serviços" > "Biblioteca"</li>
+                <li>Procure e ative as seguintes APIs:
+                    <ul>
+                        <li>Google Sheets API</li>
+                        <li>Google Drive API</li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <h4 class="mt-4">5.3. Criar Credenciais</h4>
+            <ol>
+                <li>No menu lateral, vá em "APIs e Serviços" > "Credenciais"</li>
+                <li>Clique em "Criar Credenciais" > "Conta de Serviço"</li>
+                <li>Preencha:
+                    <ul>
+                        <li>Nome: "dashboard-service-account"</li>
+                        <li>ID: deixe o padrão</li>
+                        <li>Descrição: "Conta de serviço para o Dashboard de Demandas"</li>
+                    </ul>
+                </li>
+                <li>Clique em "Criar e Continuar"</li>
+                <li>Em "Papel", selecione "Editor"</li>
+                <li>Clique em "Concluir"</li>
+            </ol>
+            
+            <h4 class="mt-4">5.4. Baixar Chave Privada</h4>
+            <ol>
+                <li>Na lista de contas de serviço, clique na conta criada</li>
+                <li>Vá na aba "Chaves"</li>
+                <li>Clique em "Adicionar Chave" > "Criar nova chave"</li>
+                <li>Selecione "JSON"</li>
+                <li>Clique em "Criar"</li>
+            </ol>
+            
+            <div class="warning-box mt-3">
+                <h4><i class="fas fa-exclamation-triangle"></i> CRÍTICO!</h4>
+                <p>O arquivo JSON baixado contém suas credenciais privadas. NUNCA:</p>
+                <ul>
+                    <li>Compartilhe este arquivo</li>
+                    <li>Faça commit dele no Git</li>
+                    <li>Envie por email ou mensagem</li>
+                </ul>
+            </div>
+            
+            <h4 class="mt-4">5.5. Configurar Credenciais</h4>
+            <ol>
+                <li>Renomeie o arquivo baixado para <code>credentials.json</code></li>
+                <li>Mova o arquivo para a pasta raiz do projeto</li>
+            </ol>
+        </div>
+        
+        <!-- Passo 6: Configurando Planilha Google -->
+        <div class="step-card" id="step6">
+            <div class="step-number">6</div>
+            <h2>Configurando Planilha Google</h2>
+            <ol>
+                <li>Abra a planilha que deseja conectar</li>
+                <li>Clique em "Compartilhar" no canto superior direito</li>
+                <li>Cole o email da conta de serviço (está no arquivo credentials.json)</li>
+                <li>Dê permissão de "Editor"</li>
+                <li>Copie o ID da planilha da URL:
+                    <div class="bg-light p-2 rounded">
+                        <code>https://docs.google.com/spreadsheets/d/<span class="text-danger">ESTE-É-O-ID-DA-PLANILHA</span>/edit</code>
+                    </div>
+                </li>
+            </ol>
+            <div class="warning-box">
+                <p>Certifique-se que a planilha tem as colunas corretas conforme a documentação!</p>
+            </div>
+        </div>
+        
+        <!-- Passo 7: Executando o Dashboard -->
+        <div class="step-card" id="step7">
+            <div class="step-number">7</div>
+            <h2>Executando o Dashboard</h2>
+            <p>Com tudo configurado, você pode iniciar o dashboard:</p>
+            <div class="bg-dark text-light p-3 rounded">
+                <code>python scripts/api_server.py</code>
+            </div>
+            <div class="success-box mt-3">
+                <h4><i class="fas fa-check-circle"></i> Sucesso!</h4>
+                <p>Se tudo deu certo, você verá a mensagem:</p>
+                <code>Uvicorn running on http://0.0.0.0:8052</code>
+                <p class="mt-2">Acesse o dashboard em: <a href="https://manfullwel.github.io/ddemandreport/" target="_blank">https://manfullwel.github.io/ddemandreport/</a></p>
+            </div>
+        </div>
+        
+        <!-- Navegação -->
+        <div class="d-flex justify-content-between mt-4">
+            <button class="nav-button" id="prevBtn" onclick="prevStep()" disabled>
+                <i class="fas fa-arrow-left"></i> Anterior
+            </button>
+            <button class="nav-button" id="nextBtn" onclick="nextStep()">
+                Próximo <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <script>
+        let currentStep = 1;
+        const totalSteps = 7;
+        
+        function updateProgress() {
+            const progress = (currentStep - 1) / (totalSteps - 1) * 100;
+            document.querySelector('.progress-bar').style.width = `${progress}%`;
+        }
+        
+        function showStep(step) {
+            document.querySelectorAll('.step-card').forEach((card, index) => {
+                if (index + 1 === step) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            document.getElementById('prevBtn').disabled = step === 1;
+            document.getElementById('nextBtn').disabled = step === totalSteps;
+            
+            updateProgress();
+        }
+        
+        function nextStep() {
+            if (currentStep < totalSteps) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        }
+        
+        function prevStep() {
+            if (currentStep > 1) {
+                currentStep--;
+                showStep(currentStep);
+            }
+        }
+        
+        // Inicializar
+        showStep(1);
+        
+        // Adicionar event listeners para checkboxes
+        document.querySelectorAll('.checklist-item input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const allChecked = Array.from(document.querySelectorAll('.checklist-item input[type="checkbox"]'))
+                    .every(cb => cb.checked);
+                
+                document.getElementById('nextBtn').disabled = !allChecked;
+            });
+        });
+    </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

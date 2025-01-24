@@ -1,0 +1,40 @@
+RELATÓRIO DE ANÁLISE DIÁRIA - 2025-01-16
+
+GRUPO JULIO
+----------------------------------------
+Resolvidos: 1113
+Pendentes Receptivo: 87
+Pendentes Ativo: 592
+Quitados: 0
+Aprovados: 0
+Análises do Dia: 0
+Total Análises: 1856
+Receptivo: 728
+Prioridades: 0
+Média Diária: 61
+
+GRUPO LEANDRO E ADRIANO
+----------------------------------------
+Resolvidos: 1140
+Pendentes Receptivo: 195
+Pendentes Ativo: 384
+Quitados: 0
+Aprovados: 0
+Análises do Dia: 0
+Total Análises: 1774
+Receptivo: 885
+Prioridades: 0
+Média Diária: 59
+
+TOTAIS GERAIS
+----------------------------------------
+Resolvidos: 2253
+Pendentes Receptivo: 282
+Pendentes Ativo: 976
+Quitados: 0
+Aprovados: 0
+Análises do Dia: 0
+Total Análises: 3630
+Receptivo: 1613
+Prioridades: 0
+Média Diária: 120

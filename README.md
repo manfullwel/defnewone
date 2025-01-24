@@ -400,3 +400,43 @@ Em caso de dúvidas ou problemas:
 
 ## Licença
 Este projeto está sob a licença MIT.
+
+## Dashboard Streamlit
+
+### Executando o Dashboard
+
+1. **Instale as dependências**
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **Execute a aplicação**
+   ```bash
+   streamlit run streamlit_app.py
+   ```
+
+3. **Acesse o dashboard**
+   - O navegador abrirá automaticamente
+   - Ou acesse: http://localhost:8501
+
+### Funcionalidades do Dashboard
+
+1. **Visualização Geral**
+   - Total de resoluções
+   - Média diária
+   - Total de responsáveis ativos
+
+2. **Filtros**
+   - Seleção de período
+   - Filtro por responsável
+   - Atualização em tempo real
+
+3. **Gráficos e Tabelas**
+   - Gráfico de barras por responsável
+   - Tabela detalhada diária
+   - Download dos dados em CSV
+
+4. **Análise Temporal**
+   - Visualização por dia
+   - Comparativo entre períodos
+   - Tendências de resolução

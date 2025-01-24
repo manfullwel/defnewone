@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Demandas - Relatório Diário</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Cabeçalho -->
+        <header class="mb-8">
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Dashboard de Demandas</h1>
+            <p class="text-gray-600" id="dataAtualizacao">Última atualização: Carregando...</p>
+        </header>
+
+        <!-- Métricas Principais -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-2">Total de Demandas</h3>
+                <p class="text-3xl font-bold text-blue-600" id="totalDemandas">-</p>
+                <p class="text-sm text-gray-500 mt-2">Atualizado diariamente</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-2">Taxa de Resolução</h3>
+                <p class="text-3xl font-bold text-green-600" id="taxaResolucao">-</p>
+                <p class="text-sm text-gray-500 mt-2">Resolvidas vs Total</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-2">Receptivo/Ativo</h3>
+                <p class="text-3xl font-bold text-purple-600" id="receptivoAtivo">-</p>
+                <p class="text-sm text-gray-500 mt-2">Distribuição atual</p>
+            </div>
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-2">Pendências</h3>
+                <p class="text-3xl font-bold text-orange-600" id="totalPendencias">-</p>
+                <p class="text-sm text-gray-500 mt-2">Total de pendências</p>
+            </div>
+        </div>
+
+        <!-- Gráficos -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <!-- Evolução Diária -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-4">Evolução Diária</h3>
+                <canvas id="evolucaoDiaria" height="300"></canvas>
+            </div>
+            <!-- Distribuição por Equipe -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-lg font-semibold text-gray-700 mb-4">Distribuição por Equipe</h3>
+                <canvas id="distribuicaoEquipe" height="300"></canvas>
+            </div>
+        </div>
+
+        <!-- Métricas por Equipe -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <!-- Equipe Julio -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Equipe Julio</h3>
+                <div class="space-y-4" id="equipeJulio">
+                    <div class="animate-pulse bg-gray-200 h-8 rounded"></div>
+                </div>
+            </div>
+            <!-- Equipe Leandro/Adriano -->
+            <div class="bg-white rounded-lg shadow p-6">
+                <h3 class="text-xl font-semibold text-gray-800 mb-4">Equipe Leandro/Adriano</h3>
+                <div class="space-y-4" id="equipeLeandro">
+                    <div class="animate-pulse bg-gray-200 h-8 rounded"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Insights e Alertas -->
+        <div class="bg-white rounded-lg shadow p-6 mb-8">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Insights e Alertas</h3>
+            <div class="space-y-4" id="insights">
+                <div class="animate-pulse bg-gray-200 h-8 rounded"></div>
+            </div>
+        </div>
+
+        <!-- Tabela de Top Performers -->
+        <div class="bg-white rounded-lg shadow p-6">
+            <h3 class="text-xl font-semibold text-gray-800 mb-4">Top Performers</h3>
+            <div class="overflow-x-auto">
+                <table class="min-w-full table-auto">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Responsável</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Resolvidas</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Taxa</th>
+                            <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Média Diária</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white divide-y divide-gray-200" id="topPerformers">
+                        <tr>
+                            <td colspan="4" class="px-6 py-4 whitespace-nowrap text-center text-gray-500">
+                                Carregando dados...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Função para carregar os dados
+        async function loadData() {
+            try {
+                const response = await fetch('../data/metrics.json');
+                const data = await response.json();
+                updateDashboard(data);
+            } catch (error) {
+                console.error('Erro ao carregar dados:', error);
+            }
+        }
+
+        // Função para atualizar o dashboard
+        function updateDashboard(data) {
+            // Atualizar métricas principais
+            document.getElementById('totalDemandas').textContent = data.geral.total_demandas;
+            document.getElementById('taxaResolucao').textContent = `${data.geral.taxa_geral}%`;
+            document.getElementById('receptivoAtivo').textContent = `${data.geral.total_receptivo}/${data.geral.total_ativo}`;
+            document.getElementById('totalPendencias').textContent = 
+                data.julio.pendentes_receptivo + data.julio.pendentes_ativo +
+                data.leandro.pendentes_receptivo + data.leandro.pendentes_ativo;
+
+            // Atualizar data
+            document.getElementById('dataAtualizacao').textContent = 
+                `Última atualização: ${new Date(data.timestamp).toLocaleString()}`;
+
+            // Atualizar gráfico de evolução diária
+            updateEvolucaoDiaria(data);
+            
+            // Atualizar gráfico de distribuição por equipe
+            updateDistribuicaoEquipe(data);
+
+            // Atualizar métricas por equipe
+            updateEquipeMetrics('equipeJulio', data.julio);
+            updateEquipeMetrics('equipeLeandro', data.leandro);
+
+            // Atualizar insights
+            updateInsights(data.insights);
+
+            // Atualizar top performers
+            updateTopPerformers(data);
+        }
+
+        // Função para atualizar o gráfico de evolução diária
+        function updateEvolucaoDiaria(data) {
+            const ctx = document.getElementById('evolucaoDiaria').getContext('2d');
+            const dates = Object.keys(data.julio.demandas_dia).sort();
+            
+            new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: dates,
+                    datasets: [{
+                        label: 'Equipe Julio',
+                        data: dates.map(date => data.julio.demandas_dia[date] || 0),
+                        borderColor: 'rgb(59, 130, 246)',
+                        tension: 0.1
+                    }, {
+                        label: 'Equipe Leandro/Adriano',
+                        data: dates.map(date => data.leandro.demandas_dia[date] || 0),
+                        borderColor: 'rgb(16, 185, 129)',
+                        tension: 0.1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Evolução de Demandas por Dia'
+                        }
+                    }
+                }
+            });
+        }
+
+        // Função para atualizar o gráfico de distribuição por equipe
+        function updateDistribuicaoEquipe(data) {
+            const ctx = document.getElementById('distribuicaoEquipe').getContext('2d');
+            
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Resolvidas', 'Pendentes Receptivo', 'Pendentes Ativo'],
+                    datasets: [{
+                        label: 'Equipe Julio',
+                        data: [
+                            data.julio.resolvidas,
+                            data.julio.pendentes_receptivo,
+                            data.julio.pendentes_ativo
+                        ],
+                        backgroundColor: 'rgba(59, 130, 246, 0.5)'
+                    }, {
+                        label: 'Equipe Leandro/Adriano',
+                        data: [
+                            data.leandro.resolvidas,
+                            data.leandro.pendentes_receptivo,
+                            data.leandro.pendentes_ativo
+                        ],
+                        backgroundColor: 'rgba(16, 185, 129, 0.5)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+
+        // Função para atualizar métricas de equipe
+        function updateEquipeMetrics(elementId, data) {
+            const container = document.getElementById(elementId);
+            container.innerHTML = `
+                <div class="grid grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-sm font-medium text-gray-500">Resolvidas</p>
+                        <p class="text-lg font-semibold text-gray-900">${data.resolvidas}</p>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-500">Taxa de Resolução</p>
+                        <p class="text-lg font-semibold text-gray-900">${data.taxa_resolucao}%</p>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-500">Pendentes Receptivo</p>
+                        <p class="text-lg font-semibold text-gray-900">${data.pendentes_receptivo}</p>
+                    </div>
+                    <div>
+                        <p class="text-sm font-medium text-gray-500">Pendentes Ativo</p>
+                        <p class="text-lg font-semibold text-gray-900">${data.pendentes_ativo}</p>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Função para atualizar insights
+        function updateInsights(insights) {
+            const container = document.getElementById('insights');
+            container.innerHTML = insights.map(insight => `
+                <div class="flex items-start p-4 ${getInsightColor(insight.impacto)}">
+                    <div class="flex-1">
+                        <p class="font-medium">
+                            ${insight.equipe}${insight.responsavel ? ` - ${insight.responsavel}` : ''}
+                        </p>
+                        <p class="text-sm mt-1">${insight.insight}</p>
+                        <p class="text-sm mt-1 font-medium">Ação: ${insight.acao}</p>
+                    </div>
+                    <span class="px-2 py-1 text-xs font-semibold rounded ${getInsightBadgeColor(insight.impacto)}">
+                        ${insight.impacto}
+                    </span>
+                </div>
+            `).join('');
+        }
+
+        // Função para atualizar top performers
+        function updateTopPerformers(data) {
+            const allResponsaveis = [
+                ...Object.entries(data.julio.responsaveis),
+                ...Object.entries(data.leandro.responsaveis)
+            ];
+
+            // Ordenar por número de demandas resolvidas
+            allResponsaveis.sort((a, b) => b[1].resolvidas - a[1].resolvidas);
+
+            const container = document.getElementById('topPerformers');
+            container.innerHTML = allResponsaveis.slice(0, 5).map(([nome, metricas]) => `
+                <tr>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">${nome}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${metricas.resolvidas}</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${metricas.taxa_resolucao}%</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">${metricas.media_diaria}</td>
+                </tr>
+            `).join('');
+        }
+
+        // Funções auxiliares para cores dos insights
+        function getInsightColor(impacto) {
+            switch (impacto) {
+                case 'ALTO': return 'bg-red-50';
+                case 'MEDIO': return 'bg-yellow-50';
+                default: return 'bg-blue-50';
+            }
+        }
+
+        function getInsightBadgeColor(impacto) {
+            switch (impacto) {
+                case 'ALTO': return 'bg-red-100 text-red-800';
+                case 'MEDIO': return 'bg-yellow-100 text-yellow-800';
+                default: return 'bg-blue-100 text-blue-800';
+            }
+        }
+
+        // Carregar dados iniciais
+        loadData();
+
+        // Atualizar a cada 5 minutos
+        setInterval(loadData, 5 * 60 * 1000);
+    </script>
+</body>
+</html>

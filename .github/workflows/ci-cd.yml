@@ -1,0 +1,130 @@
+name: Dashboard CI/CD
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+        pip install pytest pytest-cov
+    
+    - name: Run tests with coverage
+      run: |
+        python -m pytest tests/ --cov=scripts/ --cov-report=xml
+    
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage.xml
+        fail_ci_if_error: true
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    
+    - name: Install linting dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install flake8 black isort
+    
+    - name: Check code formatting
+      run: |
+        black --check scripts/
+        isort --check-only scripts/
+    
+    - name: Lint with flake8
+      run: |
+        flake8 scripts/ --count --select=E9,F63,F7,F82 --show-source --statistics
+        flake8 scripts/ --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+  build:
+    needs: [test, lint]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    
+    - name: Install build dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install build wheel
+    
+    - name: Build package
+      run: |
+        python -m build
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        name: dist
+        path: dist/
+
+  deploy-docs:
+    needs: [test, lint]
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@4.1.5
+      with:
+        branch: gh-pages
+        folder: docs
+        clean: true
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Download build artifacts
+      uses: actions/download-artifact@v2
+      with:
+        name: dist
+        path: dist/
+    
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.8'
+    
+    - name: Install deployment dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install twine
+    
+    - name: Deploy to PyPI
+      env:
+        TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
+        TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
+      run: |
+        python -m twine upload --skip-existing dist/*

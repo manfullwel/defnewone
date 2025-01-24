@@ -1,0 +1,318 @@
+Arquivo encontrado: F:/demandstest/docs/_DEMANDAS DE JANEIRO_2025.xlsx
+
+Planilhas disponíveis:
+- REGIÕES
+
+Lendo planilha: REGIÕES
+Número de linhas: 56
+Número de colunas: 8
+
+Colunas encontradas:
+1. '0'
+2. '1'
+3. '2'
+4. '3'
+5. '4'
+6. '5'
+7. '6'
+8. '7'
+
+Primeiras 2 linhas:
+        0    1                2    3        4    5                 6    7
+0     NaN  NaN              NaN  NaN      NaN  NaN               NaN  NaN
+1  JULIO   NaN  LEANDRO/ADRIANO  NaN  ADRIANO  NaN  MARCELLO/FECHADO  NaN
+================================================================================
+- DEMANDAS JULIO
+
+Lendo planilha: DEMANDAS JULIO
+Número de linhas: 3442
+Número de colunas: 20
+
+Colunas encontradas:
+1. '0'
+2. '1'
+3. '2'
+4. '3'
+5. '4'
+6. '5'
+7. '6'
+8. '7'
+9. '8'
+10. '9'
+11. '10'
+12. '11'
+13. '12'
+14. '13'
+15. '14'
+16. '15'
+17. '16'
+18. '17'
+19. '18'
+20. '19'
+
+Primeiras 2 linhas:
+                    0                    1       2   3        4           5                6        7      8                 9            10         11                 12         13   14            15  16         17               18  19
+0                 DATA            RESOLUÇÃO     CTT  N°  DEMANDA  ESCRITÓRIO  ATIVO/RECEPTIVO  DIRETOR  BANCO              CÓD.  RESPONSÁVEL   SITUAÇÃO                NaN        NaN  NaN           NaN NaN        NaT              NaN NaN
+1  2024-12-16 00:00:00  2025-01-02 00:00:00  217578   2     6000      TICKET        RECEPTIVO    JULIO   OMNI  19.97.40.8-78.26      POLIANA  RESOLVIDO  AGUARDANDO BOLETO  BOLETO 5K  NaN  REGIÃO JULIO NaN 2025-01-17  RELATÓRIO GERAL NaN
+================================================================================
+- DEMANDA LEANDROADRIANO
+
+Lendo planilha: DEMANDA LEANDROADRIANO
+Número de linhas: 1949
+Número de colunas: 22
+
+Colunas encontradas:
+1. '0'
+2. '1'
+3. '2'
+4. '3'
+5. '4'
+6. '5'
+7. '6'
+8. '7'
+9. '8'
+10. '9'
+11. '10'
+12. '11'
+13. '12'
+14. '13'
+15. '14'
+16. '15'
+17. '16'
+18. '17'
+19. '18'
+20. '19'
+21. '20'
+22. '21'
+
+Primeiras 2 linhas:
+                    0                    1       2    3        4              5                6        7          8      9            10         11   12   13   14                        15   16                   17               18  19  20   21
+0                 DATA            RESOLUÇÃO     CTT  NaN  DEMANDA     ESCRITÓRIO  ATIVO/RECEPTIVO  DIRETOR      BANCO    COD  RESPONSÁVEL   SITUAÇÃO    0  NaN  NaN                       NaN  NaN                  NaN              NaN NaN NaN  NaN
+1  2024-12-03 00:00:00  2025-01-02 00:00:00  163749  2.0  VALORES  MONITORAMENTO        RECEPTIVO  LEANDRO  SANTANDER  BANCO        ALINE  RESOLVIDO  NaN  NaN  NaN  REGIÃO LEANDRO E ADRIANO  NaN  2025-01-17 00:00:00  RELATÓRIO GERAL NaN NaN  NaN
+================================================================================
+- APROVADO E QUITADO CLIENTE
+
+Lendo planilha: APROVADO E QUITADO CLIENTE
+Número de linhas: 897
+Número de colunas: 25
+
+Colunas encontradas:
+1. '0'
+2. '1'
+3. '2'
+4. '3'
+5. '4'
+6. '5'
+7. '6'
+8. '7'
+9. '8'
+10. '9'
+11. '10'
+12. '11'
+13. '12'
+14. '13'
+15. '14'
+16. '15'
+17. '16'
+18. '17'
+19. '18'
+20. '19'
+21. '20'
+22. '21'
+23. '22'
+24. '23'
+25. '24'
+
+Primeiras 2 linhas:
+                    0      1    2                                   3              4         5  6         7          8             9   10       11         12           13               14          15       16        17  18   19        20   21   22   23   24
+0                 DATA    CTT  NaN                                NOME  SALDO DEVEDOR  DESCONTO  %  PROCESSO  CONSULTOR    ESCRITÓRIO  UF  DIRETOR      BANCO  RESPONSÁVEL         APROVADO         NaN  CONTATO  APROVADO NaN  NaN  APROVADO  NaN  NaN  NaN  NaN
+1  2024-12-01 00:00:00  98029  1.0  Antonio Armirindo Padilha Ferreira       20049.56  20049.56  0       SIM      EDGAR  POA 1 CENTRO  RS  ADRIANO  SANTANDER      SABRINA  QUITADO CLIENTE  CONFIRMADO      NaN       NaN NaN  NaN       NaN  NaN  NaN  NaN  NaN
+================================================================================
+- CALCULO DE PORCENTAGEM
+
+Lendo planilha: CALCULO DE PORCENTAGEM
+Número de linhas: 996
+Número de colunas: 3
+
+Colunas encontradas:
+1. '0'
+2. '1'
+3. '2'
+
+Primeiras 2 linhas:
+    0   1        2
+0 NaN NaN      NaN
+1 NaN NaN  #DIV/0!
+================================================================================
+- QUITADOS
+
+Lendo planilha: QUITADOS
+Número de linhas: 272
+Número de colunas: 20
+
+Colunas encontradas:
+1. '0'
+2. '1'
+3. '2'
+4. '3'
+5. '4'
+6. '5'
+7. '6'
+8. '7'
+9. '8'
+10. '9'
+11. '10'
+12. '11'
+13. '12'
+14. '13'
+15. '14'
+16. '15'
+17. '16'
+18. '17'
+19. '18'
+20. '19'
+
+Primeiras 2 linhas:
+                    0       1    2                                  3              4         5       6         7          8           9   10       11            12           13        14                     15  16                       17       18         19
+0                 DATA     CTT  NaN                               NOME  SALDO DEVEDOR  DESCONTO       %  PROCESSO  CONSULTOR  ESCRITÓRIO  UF  DIRETOR         BANCO  RESPONSAVEL  SITUAÇÃO  REGISTRADO NO SISTEMA NaN  N° DE QUITADOS DEZEMBRO      NaN        NaT
+1  2025-01-02 00:00:00  221786  1.0  Priscila Caetano Alvernaz Barcelo      127681.77  33078.76  0.7409       NÃO   ANDERSON     VITÓRIA  ES  LEANDRO  PANAMERICANO        JULIA   QUITADO                    NaN NaN                  LEANDRO  ADRIANO 2025-01-03
+================================================================================
+- FINALIZADOS 
+
+Lendo planilha: FINALIZADOS 
+Número de linhas: 43
+Número de colunas: 10
+
+Colunas encontradas:
+1. '0'
+2. '1'
+3. '2'
+4. '3'
+5. '4'
+6. '5'
+7. '6'
+8. '7'
+9. '8'
+10. '9'
+
+Primeiras 2 linhas:
+                     0         1                        2               3   4        5           6                        7        8          9
+0                 DATA  CONTRATO                 SITUAÇÃO  QUEM REALIZOU?  UF  DIRETOR  ESCRITÓRIO  CONFIRMADO PELO CLIENTE  CENÁRIO  ACORDORIA
+1  2024-12-06 00:00:00    179754  ATUALIZAÇÃO DE PARLCEAS         CLIENTE  PE    JÚLIO      OLINDA         MENSAGEM ENVIADA      NaN        NaN
+================================================================================
+- TICKTES
+
+Lendo planilha: TICKTES
+Número de linhas: 481
+Número de colunas: 18
+
+Colunas encontradas:
+1. '0'
+2. '1'
+3. '2'
+4. '3'
+5. '4'
+6. '5'
+7. '6'
+8. '7'
+9. '8'
+10. '9'
+11. '10'
+12. '11'
+13. '12'
+14. '13'
+15. '14'
+16. '15'
+17. '16'
+18. '17'
+
+Primeiras 2 linhas:
+                    0          1       2   3        4           5        6          7        8    9            10          11          12           13       14              15               16                         17
+0                 DATA     SEMANA     CTT NaN  DEMANDA  DEMANDANTE  DIRETOR      BANCO      NaN  CÓD  RESPONSÁVEL  SITUAÇÃO 1  SITUAÇÃO 2  OBSERVAÇÕES  OUTUBRO             NaN              NaN                        NaN
+1  2025-01-02 00:00:00  1ª SEMANA  208050 NaN  VALORES      TICKET    JULIO  SANTANDER  CHAPECÓ  NaN          NaN   RESOLVIDO    APROVADO          NaN     DATA  ORFÃOS 8 AS 17  ORFÃOS 17 AS 20  TOTAL DE ORFÃOS PENDENTES
+================================================================================
+- PREENCHIMENTO ARTES
+
+Lendo planilha: PREENCHIMENTO ARTES
+Número de linhas: 199
+Número de colunas: 9
+
+Colunas encontradas:
+1. '0'
+2. '1'
+3. '2'
+4. '3'
+5. '4'
+6. '5'
+7. '6'
+8. '7'
+9. '8'
+
+Primeiras 2 linhas:
+          0                 1          2            3           4              5       6          7             8
+0  CONTRATO       CONTRATANTE  CONSULTOR    CIDADE/UF   QUALIDADE  SALDO DEVEDOR       %   DESCONTO         BANCO
+1    194167  LUCIANO TEIXEIRA     ELLANY  ANÁPOLIS/GO  27/11/2023      62.439,66  86,68%   8.317,57  PANAMERICANO
+================================================================================
+- SISTEMA ANTIGO
+
+Lendo planilha: SISTEMA ANTIGO
+Número de linhas: 330
+Número de colunas: 11
+
+Colunas encontradas:
+1. '0'
+2. '1'
+3. '2'
+4. '3'
+5. '4'
+6. '5'
+7. '6'
+8. '7'
+9. '8'
+10. '9'
+11. '10'
+
+Primeiras 2 linhas:
+     0                               1            2   3        4          5         6         7    8    9    10
+0   CTT                            NOME          CPF  UF  DIRETOR      BANCO     PLACA  SITUAÇÃO  NaN  NaN  NaN
+1  6621  LUANA DO SOCORRO ALMEIDA NUNES  96437570210  PA  LEANDRO  SANTANDER  QDF 0831       NaN  NaN  NaN  NaN
+================================================================================
+-   Q.A 
+
+Lendo planilha:   Q.A 
+Número de linhas: 40
+Número de colunas: 6
+
+Colunas encontradas:
+1. '0'
+2. '1'
+3. '2'
+4. '3'
+5. '4'
+6. '5'
+
+Primeiras 2 linhas:
+      0     1    2                   3       4         5
+0  DATA   CTT  NaN             DEMANDA  ACORDO  SITUAÇÃO
+1   NaN  5725  1.0  QUITADO NOS AUTOS      NaN  PENDENTE
+================================================================================
+- BANCOS COMPLICADOS 
+
+Lendo planilha: BANCOS COMPLICADOS 
+Número de linhas: 10
+Número de colunas: 4
+
+Colunas encontradas:
+1. '0'
+2. '1'
+3. '2'
+4. '3'
+
+Primeiras 2 linhas:
+            0                      1               2              3
+0  CONTRATOS                   BANCO             COD              %
+1      140068  SINOSSERRA FINANCEIRA  105 SINOSSERRA  SEM DESCONTO 
+================================================================================
+
+
+=== ANÁLISE POR RESPONSÁVEL ===

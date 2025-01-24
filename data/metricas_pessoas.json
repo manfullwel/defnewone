@@ -1,0 +1,665 @@
+{
+  "JULIO ": {
+    "equipe": "adriano",
+    "total": 476,
+    "resolvidas": 353,
+    "percentual": 74.2,
+    "mediadiaria": 15.9,
+    "receptivo": 213,
+    "ativo": 263,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-15 02:41:56"
+    }
+  },
+  "CURITIBA": {
+    "equipe": "adriano",
+    "total": 984,
+    "resolvidas": 745,
+    "percentual": 75.7,
+    "mediadiaria": 32.8,
+    "receptivo": 539,
+    "ativo": 445,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-12 02:41:56"
+    }
+  },
+  "AMERICANA": {
+    "equipe": "adriano",
+    "total": 1073,
+    "resolvidas": 866,
+    "percentual": 80.7,
+    "mediadiaria": 35.8,
+    "receptivo": 500,
+    "ativo": 573,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-16 02:41:56"
+    }
+  },
+  "ARARAQUARA": {
+    "equipe": "adriano",
+    "total": 1022,
+    "resolvidas": 853,
+    "percentual": 83.5,
+    "mediadiaria": 34.1,
+    "receptivo": 395,
+    "ativo": 627,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-08 02:41:56"
+    }
+  },
+  "BAURU": {
+    "equipe": "adriano",
+    "total": 988,
+    "resolvidas": 834,
+    "percentual": 84.4,
+    "mediadiaria": 32.9,
+    "receptivo": 407,
+    "ativo": 581,
+    "pico": {
+      "quantidade": 9,
+      "data": "2024-12-31 02:41:56"
+    }
+  },
+  "BLUMENAU": {
+    "equipe": "adriano",
+    "total": 1022,
+    "resolvidas": 855,
+    "percentual": 83.7,
+    "mediadiaria": 34.1,
+    "receptivo": 446,
+    "ativo": 576,
+    "pico": {
+      "quantidade": 9,
+      "data": "2024-12-30 02:41:56"
+    }
+  },
+  "BRUSQUE": {
+    "equipe": "adriano",
+    "total": 1116,
+    "resolvidas": 871,
+    "percentual": 78.0,
+    "mediadiaria": 37.2,
+    "receptivo": 525,
+    "ativo": 591,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-17 02:41:56"
+    }
+  },
+  "CAMPINAS OROSIMBO": {
+    "equipe": "adriano",
+    "total": 1062,
+    "resolvidas": 852,
+    "percentual": 80.2,
+    "mediadiaria": 35.4,
+    "receptivo": 407,
+    "ativo": 655,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-17 02:41:56"
+    }
+  },
+  "CARUARU": {
+    "equipe": "adriano",
+    "total": 1140,
+    "resolvidas": 850,
+    "percentual": 74.6,
+    "mediadiaria": 38.0,
+    "receptivo": 460,
+    "ativo": 680,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-14 02:41:56"
+    }
+  },
+  "CASCAVEL": {
+    "equipe": "adriano",
+    "total": 1102,
+    "resolvidas": 957,
+    "percentual": 86.8,
+    "mediadiaria": 36.7,
+    "receptivo": 477,
+    "ativo": 625,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-16 02:41:56"
+    }
+  },
+  "CHAPECÓ": {
+    "equipe": "adriano",
+    "total": 1074,
+    "resolvidas": 817,
+    "percentual": 76.1,
+    "mediadiaria": 35.8,
+    "receptivo": 439,
+    "ativo": 635,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-16 02:41:56"
+    }
+  },
+  "CRICIÚMA": {
+    "equipe": "adriano",
+    "total": 1029,
+    "resolvidas": 778,
+    "percentual": 75.6,
+    "mediadiaria": 34.3,
+    "receptivo": 440,
+    "ativo": 589,
+    "pico": {
+      "quantidade": 9,
+      "data": "2024-12-31 02:41:56"
+    }
+  },
+  "FORTALEZA COCO": {
+    "equipe": "adriano",
+    "total": 936,
+    "resolvidas": 777,
+    "percentual": 83.0,
+    "mediadiaria": 31.2,
+    "receptivo": 466,
+    "ativo": 470,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-13 02:41:56"
+    }
+  },
+  "FORTALEZA SÃO GERARDO": {
+    "equipe": "adriano",
+    "total": 1067,
+    "resolvidas": 895,
+    "percentual": 83.9,
+    "mediadiaria": 35.6,
+    "receptivo": 493,
+    "ativo": 574,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-15 02:41:56"
+    }
+  },
+  "GUARAPUAVA": {
+    "equipe": "adriano",
+    "total": 987,
+    "resolvidas": 798,
+    "percentual": 80.9,
+    "mediadiaria": 32.9,
+    "receptivo": 468,
+    "ativo": 519,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-17 02:41:56"
+    }
+  },
+  "JOÃO PESSOA": {
+    "equipe": "adriano",
+    "total": 1080,
+    "resolvidas": 847,
+    "percentual": 78.4,
+    "mediadiaria": 36.0,
+    "receptivo": 477,
+    "ativo": 603,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-17 02:41:56"
+    }
+  },
+  "LIMEIRA": {
+    "equipe": "adriano",
+    "total": 698,
+    "resolvidas": 585,
+    "percentual": 83.8,
+    "mediadiaria": 23.3,
+    "receptivo": 345,
+    "ativo": 353,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-11 02:41:56"
+    }
+  },
+  "LONDRINA": {
+    "equipe": "adriano",
+    "total": 817,
+    "resolvidas": 625,
+    "percentual": 76.5,
+    "mediadiaria": 27.2,
+    "receptivo": 393,
+    "ativo": 424,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-14 02:41:56"
+    }
+  },
+  "MACEIO": {
+    "equipe": "adriano",
+    "total": 781,
+    "resolvidas": 613,
+    "percentual": 78.5,
+    "mediadiaria": 26.0,
+    "receptivo": 348,
+    "ativo": 433,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-15 02:41:56"
+    }
+  },
+  "MARINGÁ ZONA 7": {
+    "equipe": "adriano",
+    "total": 416,
+    "resolvidas": 359,
+    "percentual": 86.3,
+    "mediadiaria": 13.9,
+    "receptivo": 151,
+    "ativo": 265,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-08 02:41:56"
+    }
+  },
+  "MIRASSOL": {
+    "equipe": "adriano",
+    "total": 288,
+    "resolvidas": 217,
+    "percentual": 75.3,
+    "mediadiaria": 9.6,
+    "receptivo": 126,
+    "ativo": 162,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-07 02:41:56"
+    }
+  },
+  "OSASCO": {
+    "equipe": "adriano",
+    "total": 336,
+    "resolvidas": 295,
+    "percentual": 87.8,
+    "mediadiaria": 11.2,
+    "receptivo": 184,
+    "ativo": 152,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-18 02:41:56"
+    }
+  },
+  "PALMAS": {
+    "equipe": "adriano",
+    "total": 334,
+    "resolvidas": 262,
+    "percentual": 78.4,
+    "mediadiaria": 11.1,
+    "receptivo": 159,
+    "ativo": 175,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-16 02:41:56"
+    }
+  },
+  "PAU DE LIMA": {
+    "equipe": "adriano",
+    "total": 296,
+    "resolvidas": 245,
+    "percentual": 82.8,
+    "mediadiaria": 9.9,
+    "receptivo": 97,
+    "ativo": 199,
+    "pico": {
+      "quantidade": 9,
+      "data": "2024-12-30 02:41:56"
+    }
+  },
+  "PIRACICABA": {
+    "equipe": "adriano",
+    "total": 307,
+    "resolvidas": 251,
+    "percentual": 81.8,
+    "mediadiaria": 10.2,
+    "receptivo": 113,
+    "ativo": 194,
+    "pico": {
+      "quantidade": 9,
+      "data": "2024-12-31 02:41:56"
+    }
+  },
+  "PONTA GROSSA": {
+    "equipe": "adriano",
+    "total": 317,
+    "resolvidas": 269,
+    "percentual": 84.9,
+    "mediadiaria": 10.6,
+    "receptivo": 154,
+    "ativo": 163,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-11 02:41:56"
+    }
+  },
+  "RIBEIRÃO PRETO": {
+    "equipe": "adriano",
+    "total": 284,
+    "resolvidas": 249,
+    "percentual": 87.7,
+    "mediadiaria": 9.5,
+    "receptivo": 126,
+    "ativo": 158,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-15 02:41:56"
+    }
+  },
+  "SALVADOR": {
+    "equipe": "adriano",
+    "total": 291,
+    "resolvidas": 273,
+    "percentual": 93.8,
+    "mediadiaria": 9.7,
+    "receptivo": 110,
+    "ativo": 181,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-16 02:41:56"
+    }
+  },
+  "SANTO AMARO": {
+    "equipe": "adriano",
+    "total": 297,
+    "resolvidas": 242,
+    "percentual": 81.5,
+    "mediadiaria": 9.9,
+    "receptivo": 143,
+    "ativo": 154,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-01 02:41:56"
+    }
+  },
+  "SÃO JOSE DO RIO PRETO": {
+    "equipe": "adriano",
+    "total": 294,
+    "resolvidas": 230,
+    "percentual": 78.2,
+    "mediadiaria": 9.8,
+    "receptivo": 165,
+    "ativo": 129,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-09 02:41:56"
+    }
+  },
+  "SÃO PAULO - MORUMBI": {
+    "equipe": "adriano",
+    "total": 304,
+    "resolvidas": 227,
+    "percentual": 74.7,
+    "mediadiaria": 10.1,
+    "receptivo": 132,
+    "ativo": 172,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-10 02:41:56"
+    }
+  },
+  "SOROCABA": {
+    "equipe": "adriano",
+    "total": 291,
+    "resolvidas": 246,
+    "percentual": 84.5,
+    "mediadiaria": 9.7,
+    "receptivo": 96,
+    "ativo": 195,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-18 02:41:56"
+    }
+  },
+  "UBERABA E UBERLÂNDIA": {
+    "equipe": "adriano",
+    "total": 276,
+    "resolvidas": 203,
+    "percentual": 73.6,
+    "mediadiaria": 9.2,
+    "receptivo": 107,
+    "ativo": 169,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-03 02:41:56"
+    }
+  },
+  "UBERLÂNDIA": {
+    "equipe": "adriano",
+    "total": 298,
+    "resolvidas": 189,
+    "percentual": 63.4,
+    "mediadiaria": 9.9,
+    "receptivo": 94,
+    "ativo": 204,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-02 02:41:56"
+    }
+  },
+  "SÃO JOSE DOS CAMPOS": {
+    "equipe": "adriano",
+    "total": 135,
+    "resolvidas": 102,
+    "percentual": 75.6,
+    "mediadiaria": 4.5,
+    "receptivo": 55,
+    "ativo": 80,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-12 02:41:56"
+    }
+  },
+  "EQUIPE JULIO": {
+    "equipe": "adriano",
+    "total": 710,
+    "resolvidas": 573,
+    "percentual": 80.7,
+    "mediadiaria": 23.7,
+    "receptivo": 276,
+    "ativo": 434,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-18 02:41:56"
+    }
+  },
+  "JAIRANE": {
+    "equipe": "julio",
+    "total": 768,
+    "resolvidas": 628,
+    "percentual": 81.8,
+    "mediadiaria": 25.6,
+    "receptivo": 383,
+    "ativo": 385,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-18 02:41:56"
+    }
+  },
+  "ADRIANO": {
+    "equipe": "adriano",
+    "total": 778,
+    "resolvidas": 584,
+    "percentual": 75.1,
+    "mediadiaria": 25.9,
+    "receptivo": 361,
+    "ativo": 417,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-14 02:41:56"
+    }
+  },
+  "ANA GESSICA": {
+    "equipe": "julio",
+    "total": 741,
+    "resolvidas": 532,
+    "percentual": 71.8,
+    "mediadiaria": 24.7,
+    "receptivo": 391,
+    "ativo": 350,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-12 02:41:56"
+    }
+  },
+  "LUARA": {
+    "equipe": "adriano",
+    "total": 775,
+    "resolvidas": 622,
+    "percentual": 80.3,
+    "mediadiaria": 25.8,
+    "receptivo": 367,
+    "ativo": 408,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-12 02:41:56"
+    }
+  },
+  "FELIPE": {
+    "equipe": "julio",
+    "total": 759,
+    "resolvidas": 603,
+    "percentual": 79.4,
+    "mediadiaria": 25.3,
+    "receptivo": 398,
+    "ativo": 361,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-08 02:41:56"
+    }
+  },
+  "JULIANE GOMES": {
+    "equipe": "adriano",
+    "total": 735,
+    "resolvidas": 610,
+    "percentual": 83.0,
+    "mediadiaria": 24.5,
+    "receptivo": 357,
+    "ativo": 378,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-14 02:41:56"
+    }
+  },
+  "POLIANA": {
+    "equipe": "adriano",
+    "total": 745,
+    "resolvidas": 624,
+    "percentual": 83.8,
+    "mediadiaria": 24.8,
+    "receptivo": 315,
+    "ativo": 430,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-18 02:41:56"
+    }
+  },
+  "THALISSON": {
+    "equipe": "adriano",
+    "total": 799,
+    "resolvidas": 656,
+    "percentual": 82.1,
+    "mediadiaria": 26.6,
+    "receptivo": 356,
+    "ativo": 443,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-16 02:41:56"
+    }
+  },
+  "IGOR": {
+    "equipe": "adriano",
+    "total": 737,
+    "resolvidas": 592,
+    "percentual": 80.3,
+    "mediadiaria": 24.6,
+    "receptivo": 330,
+    "ativo": 407,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-15 02:41:56"
+    }
+  },
+  "MATHEUS": {
+    "equipe": "adriano",
+    "total": 764,
+    "resolvidas": 603,
+    "percentual": 78.9,
+    "mediadiaria": 25.5,
+    "receptivo": 286,
+    "ativo": 478,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-16 02:41:56"
+    }
+  },
+  "ALINE CRISTINA": {
+    "equipe": "adriano",
+    "total": 795,
+    "resolvidas": 643,
+    "percentual": 80.9,
+    "mediadiaria": 26.5,
+    "receptivo": 326,
+    "ativo": 469,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-15 02:41:56"
+    }
+  },
+  "NUNO": {
+    "equipe": "adriano",
+    "total": 698,
+    "resolvidas": 568,
+    "percentual": 81.4,
+    "mediadiaria": 23.3,
+    "receptivo": 304,
+    "ativo": 394,
+    "pico": {
+      "quantidade": 9,
+      "data": "2024-12-28 02:41:56"
+    }
+  },
+  "ELISANGELA": {
+    "equipe": "adriano",
+    "total": 749,
+    "resolvidas": 592,
+    "percentual": 79.0,
+    "mediadiaria": 25.0,
+    "receptivo": 385,
+    "ativo": 364,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-18 02:41:56"
+    }
+  },
+  "YURI": {
+    "equipe": "adriano",
+    "total": 709,
+    "resolvidas": 568,
+    "percentual": 80.1,
+    "mediadiaria": 23.6,
+    "receptivo": 323,
+    "ativo": 386,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-06 02:41:56"
+    }
+  },
+  "ANA LIDIA": {
+    "equipe": "adriano",
+    "total": 788,
+    "resolvidas": 619,
+    "percentual": 78.6,
+    "mediadiaria": 26.3,
+    "receptivo": 343,
+    "ativo": 445,
+    "pico": {
+      "quantidade": 9,
+      "data": "2025-01-18 02:41:56"
+    }
+  }
+}
