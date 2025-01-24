@@ -4,9 +4,7 @@ __pycache__/
 *$py.class
 *.so
 .Python
-build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -16,12 +14,9 @@ parts/
 sdist/
 var/
 wheels/
-*.egg-info/
-.installed.cfg
 *.egg
 MANIFEST
-venv/
-.env
+.installed.cfg
 
 # Node
 node_modules/
@@ -36,11 +31,8 @@ yarn-error.log*
 
 # Arquivos de configuração com credenciais
 config.js
-.env
 
 # IDEs
-.idea/
-.vscode/
 *.swp
 *.swo
 *~
@@ -48,3 +40,46 @@ config.js
 # OS
 .DS_Store
 Thumbs.db
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Virtual environments
+venv/
+env/
+.env/
+
+# IDE specific files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and databases
+*.log
+*.sqlite3
+
+# Local development settings
+.env
+credentials.json
+token.json
+service_account.json
+client_secret*.json
+*ngrok*
+*.exe
+*.zip
+
+# Excel temporary files
+~$*.xlsx
+~$*.xls
+
+# Sensitive data
+docs/credentials.json
+docs/service_account.json
