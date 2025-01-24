@@ -271,235 +271,132 @@ O dashboard é totalmente responsivo e se adapta a diferentes tamanhos de tela:
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-# Dashboard de Análise de Demandas
+# Guia de Instalação e Uso
 
-Um sistema completo para análise de demandas com integração entre Google Sheets e dashboard local, oferecendo visualização em tempo real e sincronização automática de dados.
+## Pré-requisitos
 
-![Dashboard Preview](docs/images/dashboard_preview.png)
+1. **Python 3.8 ou superior**
+   - Baixe do [site oficial do Python](https://www.python.org/downloads/)
+   - Durante a instalação, marque a opção "Add Python to PATH"
+   - Verifique a instalação abrindo o terminal e digitando:
+     ```bash
+     python --version
+     ```
 
-## 🌟 Funcionalidades
+2. **Git (opcional, para clonar o repositório)**
+   - Baixe do [site oficial do Git](https://git-scm.com/downloads)
+   - Ou baixe o código como ZIP do GitHub
 
-- **Dashboard Interativo**
-  - Visualização de métricas em tempo real
-  - Gráficos comparativos entre equipes
-  - Tabelas de resolução diária
-  - Atualização automática dos dados
+## Instalação
 
-- **Integração com Google Sheets**
-  - Sincronização bidirecional
-  - Validação de dados em tempo real
-  - Menu personalizado para controle
-  - Notificações de status
-
-- **Análise de Dados**
-  - Métricas por equipe
-  - Comparação de desempenho
-  - Histórico de resoluções
-  - Tendências temporais
-
-## 🚀 Como Usar
-
-### Pré-requisitos
-
-- Python 3.8+
-- Google Account
-- ngrok account (gratuita)
-
-### Instalação
-
-1. **Clone o repositório**
+1. **Clone o repositório ou baixe o ZIP**
    ```bash
-   git clone https://github.com/seu-usuario/ddemandreport.git
-   cd ddemandreport
+   git clone https://github.com/manfullwel/defnewone.git
+   cd defnewone
    ```
 
-2. **Instale as dependências**
+2. **Crie um ambiente virtual (recomendado)**
+   ```bash
+   # Windows
+   python -m venv venv
+   venv\Scripts\activate
+
+   # Linux/Mac
+   python -m venv venv
+   source venv/bin/activate
+   ```
+
+3. **Instale as dependências**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Configure o Google Sheets**
-   - Crie um projeto no [Google Cloud Console](https://console.cloud.google.com)
-   - Habilite a Google Sheets API
-   - Baixe as credenciais (`credentials.json`)
-   - Coloque o arquivo na pasta raiz do projeto
+## Configuração da Planilha
 
-4. **Configure o ngrok**
-   - [Baixe e instale o ngrok](https://ngrok.com/download)
-   - Autentique com seu token:
-     ```bash
-     ngrok config add-authtoken seu-token-aqui
-     ```
-
-### Executando o Sistema
-
-1. **Inicie o Servidor API**
-   ```bash
-   python scripts/api_server.py
-   ```
-
-2. **Inicie o Dashboard**
-   ```bash
-   python scripts/dashboard_comparativo.py
-   ```
-
-3. **Crie o Túnel ngrok**
-   ```bash
-   ngrok http 8052
-   ```
-
-4. **Configure o Google Sheets**
-   - Abra sua planilha do Google Sheets
-   - Vá em `Extensões > Apps Script`
-   - Cole o código de `google_sheets_script.gs`
-   - Configure a URL do ngrok no script
-   - Salve e autorize o script
-
-## 📊 Estrutura do Projeto
-
-```
-ddemandreport/
-├── docs/                    # Documentação
-│   └── images/             # Imagens da documentação
-├── scripts/
-│   ├── api_server.py       # Servidor API
-│   ├── dashboard_comparativo.py  # Dashboard principal
-│   ├── google_sheets_sync.py    # Sincronização com Google Sheets
-│   └── google_sheets_script.gs  # Script para Google Apps Script
-├── requirements.txt        # Dependências Python
-└── README.md              # Documentação principal
-```
-
-## 🔧 Configuração do Dashboard
-
-### Configuração do Google Sheets
-
-1. **Estrutura da Planilha**
-   - Planilha "DEMANDAS JULIO"
-   - Planilha "DEMANDA LEANDROADRIANO"
-   - Colunas necessárias:
-     - STATUS (PENDENTE, PRIORIDADE, RESOLVIDO, etc.)
+1. **Estrutura necessária da planilha Excel:**
+   - Nome da planilha: "DEMANDAS JULIO" ou "DEMANDA LEANDROADRIANO"
+   - Colunas obrigatórias:
+     - STATUS (valores: PENDENTE, PRIORIDADE, RESOLVIDO, etc.)
      - DATA
      - RESPONSÁVEL
      - DESCRIÇÃO
 
-2. **Menu do Dashboard**
-   - **Atualizar Dashboard**: Força sincronização
-   - **Configurar URL do ngrok**: Define URL de conexão
+2. **Coloque sua planilha na pasta `docs/`**
 
-### Validações de Dados
+## Executando a Análise
 
-- Status válidos:
-  - PENDENTE
-  - PRIORIDADE
-  - RESOLVIDO
-  - ANÁLISE
-  - RECEPTIVO
-  - PRIORIDADE TOTAL
+1. **Análise de Quitados Diários**
+   ```bash
+   python scripts/dashboard.py
+   ```
 
-## 📈 Funcionalidades do Dashboard
+## Dicas para Análise de Quitados Diários
 
-### Métricas Principais
+1. **Filtragem por Data**
+   - Use o formato correto de data (YYYY-MM-DD)
+   - Para análise de um dia específico:
+     ```python
+     data_analise = '2025-01-24'
+     ```
 
-- Total de demandas resolvidas por equipe
-- Média diária de resoluções
-- Comparativo entre equipes
-- Distribuição por status
+2. **Filtragem por Equipe**
+   - Para filtrar por equipe específica:
+     ```python
+     equipe = 'LEANDRO / ADRIANO'
+     ```
 
-### Visualizações
+3. **Análise Personalizada**
+   ```python
+   # Exemplo de código para análise diária
+   import pandas as pd
+   from datetime import datetime
 
-- Gráfico de barras comparativo
-- Timeline de resoluções
-- Tabelas de resolução diária
-- Distribuição por tipo de demanda
+   # Carregar planilha
+   df = pd.read_excel('sua_planilha.xlsx')
+   
+   # Converter coluna de data
+   df['DATA'] = pd.to_datetime(df['DATA'])
+   
+   # Filtrar por data
+   data_hoje = datetime.now().date()
+   df_hoje = df[df['DATA'].dt.date == data_hoje]
+   
+   # Contar resolvidos
+   resolvidos = df_hoje[df_hoje['STATUS'] == 'RESOLVIDO'].groupby('RESPONSÁVEL').size()
+   print(resolvidos)
+   ```
 
-## 🔄 Pipeline de Integração Contínua
+## Dicas Extras
 
-### GitHub Actions
+1. **Otimizando a Análise**
+   - Mantenha a planilha atualizada
+   - Use formatos de data consistentes
+   - Evite espaços extras nos nomes
+   - Padronize os status (RESOLVIDO, PENDENTE, etc.)
 
-```yaml
-name: Dashboard CI/CD
+2. **Boas Práticas**
+   - Faça backup dos dados
+   - Valide os resultados manualmente
+   - Documente alterações importantes
+   - Mantenha registro de inconsistências
 
-on:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
+3. **Solução de Problemas Comuns**
+   - Erro de data: Verifique o formato (YYYY-MM-DD)
+   - Nome não encontrado: Verifique espaços e caracteres especiais
+   - Status incorreto: Padronize maiúsculas/minúsculas
 
-jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.8'
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    - name: Run tests
-      run: |
-        python -m pytest tests/
+4. **Automatização**
+   - Crie scripts para análises frequentes
+   - Use agendador de tarefas para relatórios diários
+   - Configure alertas para valores discrepantes
 
-  deploy:
-    needs: test
-    runs-on: ubuntu-latest
-    steps:
-    - name: Deploy to production
-      run: |
-        echo "Deploy steps here"
-```
+## Suporte
 
-## 🤝 Contribuindo
+Em caso de dúvidas ou problemas:
+1. Verifique a documentação
+2. Confira os logs de erro
+3. Abra uma issue no GitHub
+4. Entre em contato com a equipe de suporte
 
-1. Fork o projeto
-2. Crie sua Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a Branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
-
-## 📝 Licença
-
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
-
-## 📧 Contato
-
-Igor Soares - [@manfullwel](https://github.com/manfullwel)
-
-Link do Projeto: [https://github.com/manfullwel/ddemandreport](https://github.com/manfullwel/ddemandreport)
-
-## 📸 Screenshots Automáticos
-
-O dashboard possui um sistema automatizado de captura de screenshots que é executado a cada 6 horas. Isso garante que a documentação sempre tenha imagens atualizadas do sistema. Os screenshots incluem:
-
-- Visão geral do dashboard
-- Comparação entre equipes
-- Distribuição de demandas
-- Métricas diárias
-
-Os screenshots são salvos automaticamente na pasta `docs/screenshots` e são atualizados no GitHub Pages.
-
-Para capturar screenshots manualmente, você pode:
-
-1. Iniciar o dashboard:
-```bash
-python scripts/api_server.py
-```
-
-2. Em outro terminal, executar o script de captura:
-```bash
-python scripts/capture_screenshots.py
-```
-
-## 📚 Manual de Instalação
-
-Para uma instalação passo a passo detalhada, com instruções para usuários iniciantes, acesse nosso [Manual Interativo](https://manfullwel.github.io/ddemandreport/manual.html).
-
-Este manual inclui:
-- ✅ Guia visual passo a passo
-- ⚠️ Alertas importantes em cada etapa
-- 🔒 Instruções detalhadas para configuração do Google Cloud
-- 📝 Checklist de requisitos
-- 🎯 Confirmação de sucesso em cada etapa
+## Licença
+Este projeto está sob a licença MIT.
